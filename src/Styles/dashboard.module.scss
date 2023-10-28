@@ -1,0 +1,347 @@
+.mainWrapper {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+
+	.leftPanel {
+		height: 100%;
+		width: 22%;
+		padding: 2rem 0;
+		background: linear-gradient(
+			180deg,
+			#eb6b9d 0%,
+			rgba(255, 87, 87, 0.7) 138.64%
+		);
+
+		.logoWrapper {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 0 0 0 3rem;
+			width: 100%;
+
+			.logoIcon {
+				width: 15%;
+			}
+
+			.logoText {
+				width: 32%;
+			}
+		}
+
+		.locationSelector {
+			margin: 4rem 0 0 3rem;
+			border-radius: 1rem;
+			width: 80%;
+			height: 10rem;
+			background-color: white;
+		}
+
+		.navigationTabs {
+			margin: 2.5rem 0 0 0;
+			.tab {
+				display: flex;
+				justify-content: flex-start;
+				padding: 0 0 0 3.5rem;
+				align-items: center;
+				width: 100%;
+				font-size: 20px;
+				height: 4rem;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 600;
+				color: #ffffff;
+
+				.active {
+					background: rgba(255, 255, 255, 0.2);
+				}
+
+				&:hover {
+					cursor: pointer;
+					background: rgba(217, 217, 217, 0.15);
+				}
+
+				img {
+					height: 26px;
+					aspect-ratio: 1;
+					scale: 1.5;
+				}
+
+				&:nth-child(1) {
+					img {
+						height: 21px;
+						width: 26px;
+						margin: 0 1.8rem 0 0.2rem;
+					}
+				}
+				&:nth-child(2) {
+					img {
+						margin: 1rem 2rem 0 0;
+					}
+				}
+				&:nth-child(3) {
+					img {
+						margin: 0 2rem 0 0;
+					}
+				}
+				&:nth-child(4) {
+					img {
+						margin: 1rem 2rem 0 0;
+					}
+				}
+			}
+		}
+	}
+
+	.rightPanel {
+		height: 100%;
+		width: calc(100% - 22%);
+
+		.headBar {
+			padding: 0 3rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: 6rem;
+			background-color: #ffffff;
+			box-shadow: 1px 3px rgb(231, 231, 231);
+
+			.leftWrapper {
+				height: inherit;
+				display: flex;
+				align-items: center;
+
+				.searchBar {
+					overflow: hidden;
+					width: 30rem;
+					height: 55%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 2rem;
+					box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px
+							0px,
+						rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+					input {
+						width: 88%;
+						height: 90%;
+						padding: 0 0 0 1rem;
+						border: none;
+						font-size: 1.2rem;
+						caret-color: #494949;
+						font-weight: 600;
+						color: #00000086;
+						font-family: 'Open Sans', sans-serif;
+
+						&::placeholder {
+							color: #00000086;
+							font-weight: 600;
+							font-size: 1.2rem;
+						}
+
+						&:focus {
+							outline: none;
+						}
+					}
+
+					> div {
+						border-radius: 100%;
+						aspect-ratio: 1;
+						height: 75%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						overflow: hidden;
+						transition: all 0.1s ease-in-out;
+						background: linear-gradient(
+							119.78deg,
+							#ff5757 14.24%,
+							rgba(255, 87, 87, 0) 134.54%
+						);
+
+						svg {
+							color: #ffffff;
+							font-size: 1.4rem;
+						}
+
+						&:hover {
+							cursor: pointer;
+							transform: scale(1.05);
+						}
+					}
+				}
+
+				.addBooking {
+					background: linear-gradient(
+						178.41deg,
+						#fb8085 1.35%,
+						#ff5757 139.03%
+					);
+					height: 55%;
+					border-radius: 10rem;
+					padding: 0 2rem;
+					margin: 0 0 0 1.5rem;
+					overflow: hidden;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					transition: all 0.2s ease-in-out;
+
+					svg {
+						color: white;
+						font-size: 1.5rem;
+					}
+
+					span {
+						font-size: 1rem;
+						font-weight: 600;
+						font-family: 'Open Sans', sans-serif;
+						color: white;
+						margin: 0 0 0 0.5rem;
+					}
+
+					&:hover {
+						cursor: pointer;
+						background: transparent;
+						border: 1px solid #ff5757;
+
+						svg {
+							color: #ff5757;
+						}
+
+						span {
+							color: #ff5757;
+						}
+					}
+				}
+			}
+
+			.profile {
+				box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px
+						0px,
+					rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+				background-color: white;
+				height: 55%;
+				overflow: hidden;
+				border-radius: 10rem;
+				padding: 0 1rem 0 0.3rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				word-break: keep-all;
+
+				img {
+					object-fit: contain;
+					height: 85%;
+					border-radius: 100%;
+					aspect-ratio: 1;
+				}
+
+				span {
+					font-family: 'Roboto', sans-serif;
+					font-weight: 400;
+					margin: 0 0 0 0.8rem;
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.headingWrapper {
+			display: flex;
+			align-items: center;
+			margin: 2rem 0 0 3.5rem;
+
+			h3 {
+				font-family: 'Inter', sans-serif;
+				font-weight: 600;
+				color: #000000d9;
+				font-size: 25px;
+			}
+
+			img {
+				height: 2.5rem;
+				aspect-ratio: 1;
+				margin: 0 0 0 1.2rem;
+			}
+		}
+
+		.tabSelector {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			max-width: 50%;
+			margin: 2rem 0 0 3.5rem;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 600;
+			font-size: 1.2rem;
+			color: rgba(0, 0, 0, 0.68);
+
+			div {
+				height: 3rem;
+				min-width: 7rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: flex-start;
+
+				&:hover {
+					cursor: pointer;
+				}
+
+				&::after {
+					content: '';
+					height: 5px;
+					border-radius: 5rem;
+					display: none;
+					background: linear-gradient(
+						180deg,
+						#fc8f8f 0%,
+						#ff5757 100%
+					);
+					margin: 3px 0 0 0;
+					width: 100%;
+				}
+			}
+
+			div:nth-child(n + 2) {
+				margin: 0 0 0 4.5rem;
+			}
+
+			.selected {
+				transition: all 0.2s ease-in-out;
+				&::after {
+					display: block;
+				}
+			}
+		}
+
+		.bookingWrapper {
+			margin: 1rem 0 0 3.5rem;
+			height: 60vh;
+			width: 55%;
+			border-radius: 1rem;
+			overflow: hidden;
+			border: 1px solid #d1d1d1;
+
+			.bookingInfo {
+				width: 100%;
+				background-color: #ececec;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				height: 2.5rem;
+
+				p {
+					width: fit-content;
+					min-width: 25%;
+					color: #000;
+					font-family: 'Open Sans', sans-serif;
+					font-size: 1rem;
+					font-weight: 600;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
